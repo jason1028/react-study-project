@@ -1,2 +1,2 @@
 # react-study-project
-react-study
+react person study

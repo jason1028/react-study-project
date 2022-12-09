@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title test 渲染大字体 1`] = `
+<body>
+  <div>
+    <p
+      style="font-size: 2em; color: red;"
+    >
+       
+      big font
+       
+    </p>
+  </div>
+</body>
+`;
+
+exports[`Title test 渲染小字体 1`] = `
+<body>
+  <div>
+    <p
+      style="font-size: 0.5em; color: green;"
+    >
+       
+      small font
+       
+    </p>
+  </div>
+</body>
+`;
