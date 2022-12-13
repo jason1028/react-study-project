@@ -8,7 +8,7 @@ type Props = ButtonProps;
 
 // 身份文案
 const mapper: Record<UserRoleType, string> = {
-    user: '普通管理员',
+    user: '普通用户',
     admin: '管理员'
 }
 
@@ -26,8 +26,12 @@ const AuthButton: FC<Props> = (props: Props) => {
         getLoginState().catch((e) => message.error(e.message));
     }, []);
 
+    const testFuc = () => {
+        console.log(11111);
+    }
+
     return (
-        <Button {...restProps} className={classnames(className, styles.authButton)}>
+        <Button {...restProps} className={classnames(className, styles.authButton)} onClick={ testFuc }>
             {mapper[userType!] || ""}
             {children}
         </Button>

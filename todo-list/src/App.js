@@ -11,6 +11,12 @@ import Title from "./components/Title.tsx";
 
 import AuthButton from "./components/AuthButton";
 
+/**
+ * hooks调试
+*/
+import PowHook from './hooks/usePow/index';
+
+
 class App extends Component {
     constructor(props) {
         super(props);
@@ -33,9 +39,7 @@ class App extends Component {
             // </Provider>
             <div>
                 <section>
-                    {/* <Title type="small" title="小字体"/>
-                    <Title type="large" title="大写体"/> */}
-                    <AuthButton>登 录</AuthButton>
+                   <PowHook/>
                 </section>
             </div>
         );

@@ -1,6 +1,22 @@
 // 这是在执行npm test的时候就会执行的文件，用于初始化一些变量
 // 全局引入
 import "jest-location-mock";
+import '@testing-library/jest-dom';
+
+
+import server from "./mockServer/server";
+
+beforeAll(() => {
+  server.listen();
+});
+
+afterEach(() => {
+  server.resetHandlers();
+});
+
+afterAll(() => {
+  server.close();
+});
 
 // tests/jest-setup.ts  
 // 在全局变量global上实现localStorage API
